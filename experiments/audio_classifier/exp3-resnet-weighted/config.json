@@ -1,0 +1,24 @@
+{
+    "data": {
+        "train": "data/CMU-MOSEI/Labels/Data_Train_modified.csv",
+        "val": "data/CMU-MOSEI/Labels/Data_Val_modified.csv"
+    },
+    "train": {
+        "shuffle": true,
+        "batch_size": 512,
+        "lr": 0.001,
+        "weight_decay": 0.000001,
+        "epochs": 200,
+        "eval_epoch": 1,
+        "save_epoch": 4
+    },
+    "model": {
+        "checkpoint_path": "",
+        "source": "src.model.resnet",
+        "name": "ResNet",
+        "prams": {
+            "resnet_name": "resnet18",
+            "pretrained": false
+        }
+    }
+}

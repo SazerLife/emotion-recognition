@@ -1,0 +1,28 @@
+{
+    "data": {
+        "train": "data/CMU-MOSEI/Labels/Data_Train_modified.csv",
+        "val": "data/CMU-MOSEI/Labels/Data_Val_modified.csv"
+    },
+    "train": {
+        "shuffle": true,
+        "batch_size": 2048,
+        "lr": 0.001,
+        "weight_decay": 0.000001,
+        "epochs": 5000,
+        "eval_epoch": 25,
+        "save_epoch": 250
+    },
+    "model": {
+        "checkpoint_path": "",
+        "source": "src.model.simple_audio_classifier",
+        "name": "SimpleAudioClassifier",
+        "prams": {
+            "embedding_dim": 2,
+            "input_lenght": 690,
+            "conv_layers_count": 1,
+            "conv_kernel_size": 3,
+            "conv_stride": 1,
+            "dropout_p": 0.1
+        }
+    }
+}

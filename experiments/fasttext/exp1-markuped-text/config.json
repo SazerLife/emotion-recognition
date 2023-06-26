@@ -1,0 +1,17 @@
+{
+    "data": {
+        "train": "data/CMU-MOSEI/Labels/Data_Train_modified.csv",
+        "dev": "data/CMU-MOSEI/Labels/Data_Val_modified.csv",
+        "text_column": "text"
+    },
+    "model": {
+        "vector_size": 300,
+        "window": 5,
+        "min_count": 1,
+        "workers": 4,
+        "sg": 0
+    },
+    "train": {
+        "epochs": 300
+    }
+}

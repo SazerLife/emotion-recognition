@@ -1,0 +1,24 @@
+{
+    "data": {
+        "train": "data/CMU-MOSEI/Labels/Data_Train_modified.csv",
+        "val": "data/CMU-MOSEI/Labels/Data_Val_modified.csv"
+    },
+    "train": {
+        "shuffle": true,
+        "batch_size": 4096,
+        "lr": 0.0001,
+        "weight_decay": 5.0,
+        "epochs": 40000,
+        "eval_epoch": 100,
+        "save_epoch": 1000
+    },
+    "model": {
+        "checkpoint_path": "",
+        "source": "src.model.complicated_fasttext_classifier",
+        "name": "ComplicatedFastTextClassifier",
+        "prams": {
+            "in_features": 600,
+            "dropout_p": 0.1
+        }
+    }
+}

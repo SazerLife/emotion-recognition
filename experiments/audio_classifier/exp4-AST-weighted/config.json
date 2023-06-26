@@ -1,0 +1,26 @@
+{
+    "data": {
+        "train": "data/CMU-MOSEI/Labels/Data_Train_modified.csv",
+        "val": "data/CMU-MOSEI/Labels/Data_Val_modified.csv"
+    },
+    "train": {
+        "shuffle": true,
+        "batch_size": 64,
+        "lr": 0.001,
+        "weight_decay": 0.000001,
+        "epochs": 50,
+        "eval_epoch": 1,
+        "save_epoch": 4
+    },
+    "model": {
+        "checkpoint_path": "",
+        "source": "src.model.AST",
+        "name": "AST",
+        "prams": {
+            "max_length": 690,
+            "num_hidden_layers": 6,
+            "num_mel_bins": 95,
+            "patch_size": 10
+        }
+    }
+}
